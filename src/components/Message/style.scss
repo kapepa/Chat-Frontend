@@ -1,0 +1,243 @@
+@import '../../styles/variables';
+
+.message{
+	display: flex;
+	flex-direction: row;
+	margin-bottom: 20px;
+	// &--is-audio{
+	// }
+	&__content{
+		display: flex;
+		flex-direction: column;
+		&-wrap{
+			display: flex;
+			&-reverse{
+				flex-direction: row-reverse;
+			}
+		}
+	}
+	.message__btn-del{
+		width: 30px;
+		margin: 0;
+		padding: 0!important;
+		background-color: transparent!important;
+	}
+	&__avatar {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
+		align-items: center;
+		img{
+			border-radius: 50px;
+			width: 33px;
+			height: 33px;
+			margin-right: 13px;
+			margin-top: 13px;
+			margin-right: 13px;
+			margin-bottom: 23px;
+		}
+	}
+	&__bubble{
+		background-color: $blue;
+		box-shadow: 0 5px 5px rgba(54, 116, 255, 0.196733);
+		border-radius: 12px 12px 12px 0;
+		margin-bottom: 8px;
+	}
+	&__text{
+		color: #fff;
+		padding: 14px 18px;
+		line-height: 20px;
+		max-width: 440px;
+	}
+	&__date{
+		font-size: 12px;
+		opacity: .4;
+		&-isme{
+			text-align: end;
+		}
+	}	
+	&--isme{
+		display: flex;
+		flex-direction: row-reverse;
+		margin-bottom: 20px;
+		.message__bubble {
+			background-color: #fff;
+			border: 1px solid #ececec;
+			box-shadow: 0 4px 4px rgba(0, 0, 0, 0.2);
+			border-radius: 12px 12px 0 12px;
+			.message__text {
+				color: $black;
+			}
+		}
+		.message__avatar{
+			img{
+				margin-right: 0;
+				margin-left: 15px;
+			}
+		}
+	}
+	&--image{
+		margin-bottom: 20px;
+		.message__attachments{
+			img{
+				width: 150px;
+				height: 150px;
+			}
+		}
+	}
+	&--is-attach{
+		margin-bottom: 20px;
+		.message__avatar{
+			img{
+				margin-bottom: 15px;
+			}
+		}
+	}
+	&__check{
+		width: 20px;
+		margin-right: 14px;
+		margin-bottom: 22px;
+		align-self: flex-end;
+	}
+	&__attachments{
+		// display: flex;
+		margin: 0 10px;
+		max-width: 440px;
+		img{
+			width: 50px;
+			height: 50px;
+			margin-right: 5px;
+			border-radius: 10px;
+			cursor: pointer;
+		}
+	}
+	&__is-typing{
+		height: 46px;
+		width: 86px;
+		background:#E5EDFF;
+		position: relative;
+		border-radius: 10px;
+		margin-bottom: 0!important;
+		.loading{
+			position: absolute;
+			top: 50%;
+			left: 50%;
+			transform: translate(-50%,-50%);
+			.dot{
+				height: 8px;
+				width: 8px;
+				border-radius: 50%;
+				background: #c1c1c1;
+				display: block;
+				float: left;
+				margin: 0 0 0 8px;
+				&:first-child{
+					margin: 0;
+				}
+				&.one{
+					animation: cycleOne 1s ease-in-out infinite;
+					animation-direction: normal;
+				}
+				&.two{
+					animation: cycleTwo 1s ease-in-out infinite;
+					animation-direction: normal;
+
+				}
+				&.three{
+					animation: cycleTree 1s ease-in-out infinite;
+					animation-direction: normal;
+				}
+			}
+		}
+		
+		@keyframes cycleOne{
+			0% { opacity: .5 }
+			16% { opacity: 1 }
+			33% { opacity: .5 }
+			50% { opacity: 0 }
+			67% { opacity: 0 }
+			83% {opacity: 0 }
+			100% {opacity: 0 }
+		}
+
+		@keyframes cycleTwo{
+			0% { opacity: 0 }
+			16% { opacity: 0 }
+			33% { opacity: .5 }
+			50% { opacity: 1 }
+			67% { opacity: .5 }
+			83% {opacity: 0 }
+			100% {opacity: 0 }
+		}
+
+		@keyframes cycleTree{
+			0% { opacity: 0 }
+			16% { opacity: 0 }
+			33% { opacity: 0 }
+			50% { opacity: 0 }
+			67% { opacity: .5 }
+			83% {opacity: 1 }
+			100% {opacity: .5 }
+		}
+	}
+	&__audio{
+		padding: 20px;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 260px;
+		position: relative;
+		overflow: hidden;
+		background-color:#3674ff;
+		border-radius: 10px 10px 10px 0;
+		&-isMe{
+			border-radius: 10px 10px 0 10px;
+		}
+		&-duration{
+			font-style: bold;
+			font-size: 12px;
+			line-height: 14px;
+			line-height: 1;
+			color: #FFFFFF;
+			opacity: .5;
+			z-index: 2;
+		}
+		&-wave{
+			z-index: 2;
+		}
+		&-progress{
+			position: absolute;
+			height: 100%;
+			top: 0;
+			left: 0;
+			bottom: 0;
+			background-color:#418FFF;
+			width: 0;
+			transition: width .1s ease;
+		}
+		&-btn{
+			z-index: 2;
+			>button{
+				width: 28px;
+				height: 28px;
+				border-radius: 50%!important;
+				padding: 0!important;
+				border: 0;
+				cursor: pointer;
+				background-color: #0F3997!important;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				img{
+					vertical-align: center;
+				}
+			}
+		}
+	}
+}
+
+audio{
+	display: none;
+}
+
+

@@ -1,0 +1,67 @@
+input{
+	padding: 14px 15px;
+	position: relative;
+	&:focus{
+		box-shadow: none;
+		border-color: none;
+	}
+}
+.ant-input-affix-wrapper{
+	input{
+		margin-right: 15px;
+	}
+	.ant-input-prefix{
+		svg{
+			width: 18px;
+			height: 18px;
+			opacity: .5;
+			margin-right: 13px;
+			transition: .5s ease opacity;
+			cursor: pointer;
+			&:hover{
+				opacity: 1;
+			}
+		}
+	}
+	.ant-input-suffix{
+		svg{
+			width: 18px;
+			height: 18px;
+			opacity: .5;
+			margin-right: 13px;
+			transition: .5s ease opacity;
+			cursor: pointer;
+			&:hover{
+				opacity: 1;
+			}			
+		}
+		img{
+			cursor: pointer;
+			transition: .5s ease opacity;
+			margin-right: 13px;
+			position: relative;
+			top: 2px;
+			width: 18px;
+			&:hover{
+				opacity: 1
+			}
+		}
+	}
+	button{
+		margin: 0!important;
+		padding: 0!important;
+		background-color: transparent!important;
+		text-align: center;
+		border: 0;
+	}
+}
+.ant-input-prefix{
+	position: relative;
+	.emoji-mart{
+		position: absolute;
+		transform: translateY(-60%);
+	}
+	.emoji-mart-search, .emoji-mart-bar, .emoji-mart-category-label{
+		display: none;
+	}
+}

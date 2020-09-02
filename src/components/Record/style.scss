@@ -1,0 +1,28 @@
+.chat__dialog-dote{
+	margin-right: 13px;
+	cursor: pointer;
+	position: relative;
+	width: 18px;
+	height: 18px;
+	&::before{
+		content: "";
+		background-color: lightcoral;
+		border-radius: 30px;
+		width: 18px;
+		height: 18px;
+		position: absolute;
+		animation: record-wave 1s infinite ease;
+	}
+}
+
+@keyframes record-wave {
+	0% {
+		transform: scale(1)
+	}
+	50% {
+		transform: scale(.85);
+	}
+	100%{
+		transform: scale(1);
+	}
+}

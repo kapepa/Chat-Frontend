@@ -1,0 +1,14 @@
+.avarat__gradient{
+	border-radius: 50px;
+	width: 33px;
+	height: 33px;
+	margin-right: 13px;
+	margin-bottom: 8px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	&-character{
+		font-size: 14px;
+		color: #fff;
+	}
+}

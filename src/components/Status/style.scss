@@ -1,0 +1,24 @@
+.status-online, .status-offline{
+	font-size: 14px;
+	line-height: 16px;
+	color: #202020;
+	opacity: 0.3;
+	position: relative;
+	display: inline-block;
+	margin-bottom: 3px;
+}
+.status-symbol{
+	position: relative;
+	width: 6px;
+	height: 6px;
+	background-color: #00C980;
+	border-radius: 50%;
+	display: inline-block;
+	margin-right: 5px;
+}
+.green{
+	background-color: #00C980;
+}
+.red{
+	background-color: red;
+}
